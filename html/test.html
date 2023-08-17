@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Day and Night Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+
+        #sky {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+
+        #sun,
+        #moon {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+        }
+
+
+        #sun {
+            background-color: #ffcc00;
+        }
+
+
+        #moon {
+            background-color: #f2f2f2;
+            opacity: 0;
+        }
+
+
+        @keyframes dayNightCycle {
+            0%, 100% {
+                background-color: #b4d0e5;
+            }
+            50% {
+                background-color: #052b49;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="sky">
+        <div id="sun"></div>
+        <div id="moon"></div>
+    </div>
+
+
+    <script>
+        const sun = document.getElementById("sun");
+        const moon = document.getElementById("moon");
+
+
+        function animate() {
+            sun.style.transform = "translateX(80%) translateY(20%)";
+            moon.style.transform = "translateX(10%) translateY(30%)";
+            moon.style.opacity = 1;
+            sun.style.opacity = 0;
+
+
+            setTimeout(() => {
+                sun.style.transform = "translateX(90%) translateY(60%)";
+                moon.style.transform = "translateX(60%) translateY(30%)";
+                moon.style.opacity = 0;
+                sun.style.opacity = 1;
+            }, 2000);
+
+
+            setTimeout(() => {
+                animate();
+            }, 4000);
+        }
+
+
+        animate();
+    </script>
+</body>
+
+
+</html>
+
+

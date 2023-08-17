@@ -1,0 +1,87 @@
+
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+<!--                   PRACTICAL 6 (IU2141050039)                  -->
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+
+<html>
+    <header>
+        <title>Registration form</title>
+        <style>
+            .prac{
+            text-align: center;
+            color: #003049;
+            font-family: Arial, Nelvetic;
+            border: 3px black;
+            }
+
+            .ce{
+                text-align: center;
+                margin: 20;
+                color:rgb(241, 143, 22);
+                font: optional;
+                font-size: medium;
+            }
+            .button{
+                background-color: #fcbf49;
+                color: #f77f00;
+                width: 100px;
+                height: 50px;
+                border-radius: 25%;
+                border: #d62828 2px solid;
+            }
+
+            .form{
+                padding: 20px;
+                margin-left: 150px;
+                margin-right: 150px;
+                background-color: #eae2b7;
+            }
+        </style>
+    </header>
+            
+    <body>
+        <h1 class = "prac">Registration Form</h1>
+        <hr>
+        <div class="form">
+            <form action="">
+                <div class="ce">
+                    <table align="Left" for="full_name =">Enter First Name : </table>
+                    <input type="text" name="Firstname" id="Firstname" placeholder="First Name"><br><br>
+                </div>
+                <div class="ce">
+                    <table align="Left" for="middlename">Enter Middle Name : </table>
+                    <input type="text" name="Middlename" id="Middlename" placeholder="Middle Name"><br><br>
+                </div>
+                <div class="ce">
+                    <table align="Left" for="lastname">Enter Last Name : </table>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name"><br><br>
+                </div>
+
+                <div class="ce">
+                    <h3>Gender:</h3>
+                    <input type="radio" id="Male" name="Gender" value="Male">
+                    <label align="Left" for="Male">Male</label><br>
+                    <input type="radio" id="Female" name="Gender" value="Female">
+                    <label align="Left" for="Female">Female</label><br><br>
+                </div>
+
+                <div class="ce">
+                    <lable for="hobbies">Hobbies</lable>
+                    <select name="hobbies" id="hobbies"><br><br>
+                        <option>Coding problem solving</option>
+                        <option>football</option>
+                        <option>Tennis</option>
+                        <option>Moblie games</option>
+                        <option>Reading</option>
+                    </select><br><br>
+                
+                <div class="ce">
+                    <button class="button">Submit</button>
+                </div>
+                </div>
+            </form>
+        </div>
+
+        
+    </body>
+</html>

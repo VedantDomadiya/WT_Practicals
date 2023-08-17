@@ -1,0 +1,181 @@
+
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+<!--                   PRACTICAL 8 (IU2141050039)                  -->
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practical-8</title>
+
+    <style>
+        body {
+            background-color: rgb(222, 172, 102);
+            animation-name: night;
+            animation-duration: 16s;
+            animation-iteration-count: 4;
+        }
+
+        @keyframes night {
+            0% {
+                background-color: rgb(230, 212, 173)
+            }
+
+            25% {
+                background-color: rgb(203, 173, 114)
+            }
+
+            50% {
+                background-color: rgb(114, 89, 25)
+            }
+
+            75% {
+
+                background-color: rgb(40, 49, 53)
+            }
+
+            100% {
+                background-color: rgb(6, 8, 8)
+            }
+        }
+
+        @keyframes moon {
+            0% {
+                left: 0px;
+                top: 800px;
+                opacity: 0;
+            }
+
+            25% {
+                left: 5px;
+                top: 600px;
+                opacity: 0.25;
+            }
+
+            50% {
+                left: 10px;
+                top: 400px;
+                opacity: 0.5;
+            }
+
+            75% {
+                left: 15px;
+                top: 0px;
+                opacity: 0.75;
+            }
+
+            100% {
+                left: 100px;
+                top: 0px;
+                opacity: 1;
+            }
+
+        }
+
+
+        @keyframes sun {
+            0% {
+                left: 0px;
+                top: 600px;
+                opacity: 0.6;
+            }
+
+            10% {
+                left: 100px;
+                top: 500px;
+                opacity: 0.7;
+            }
+
+            20% {
+                left: 200px;
+                top: 400px;
+                opacity: 0.8;
+            }
+
+            30% {
+                left: 300px;
+                top: 300px;
+                opacity: 0.9;
+            }
+
+            40% {
+                left: 400px;
+                top: 150px;
+                opacity: 1;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+                opacity: 1;
+            }
+
+            60% {
+                left: 600px;
+                top: 50px;
+                opacity: 0.9;
+            }
+
+            70% {
+                left: 700px;
+                top: 200px;
+                opacity: 0.6;
+            }
+
+            80% {
+                left: 800px;
+                top: 350px;
+                opacity: 0.5;
+            }
+
+            90% {
+                left: 900px;
+                top: 550px;
+                opacity: 0.4;
+            }
+
+            100% {
+                left: 1000px;
+                top: 700px;
+                opacity: 0;
+            }
+        }
+
+        #sun {
+            border-radius: 100%;
+            background-color: orange;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            animation-name: sun;
+            animation-duration: 16s;
+            animation-iteration-count: 4;
+        }
+
+        #moon {
+            border-radius: 100%;
+            margin-top: 0%;
+            background-color: bisque;
+            width: 200px;
+            opacity: 0;
+            margin-left: 600px;
+            height: 200px;
+            position: relative;
+            animation-name: moon;
+            animation-duration: 16s;
+            animation-iteration-count: 4;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="sun"></div>
+
+    <div id="moon"></div>
+
+</body>
+
+</html>
