@@ -1,0 +1,67 @@
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+<!--                   PRACTICAL 9 (IU2141050039)                  -->
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+
+<html>
+<head>
+	<title>PRACTICAL 9 </title>
+</head>
+<body>
+	<script>
+		var x = prompt('Enter Number 1');
+		var y = prompt('Enter Number 2');
+		var z = prompt('Enter Number 3');
+		if (x>y)
+		{
+			if (z>x)
+			{
+				alert('Biggest no.'+z)
+			}
+			else
+			{
+				alert('Biggest no.'+x)
+			}
+		}
+		else
+		{
+			if (z>y)
+			{
+				alert('Biggest no.'+z)
+			}
+			else
+			{
+				alert('Biggest no.'+y)
+			}
+		}
+	</script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Find the Biggest Number</title>
+</head>
+<body>
+    <script>
+        var numbers = [];
+        for (var i = 1; i <= 3; i++) {
+            var input = prompt('Enter Number ' + i);
+            var num = parseFloat(input);
+
+            if (!isNaN(num)) {
+                numbers.push(num);
+            } else {
+                alert('Invalid input. Please enter a valid number.');
+                i--; // Decrement i to re-enter the current number.
+            }
+        }
+
+        if (numbers.length === 0) {
+            alert('No valid numbers entered.');
+        } else {
+            var biggestNumber = Math.max.apply(null, numbers);
+            alert('The biggest number is: ' + biggestNumber);
+        }
+    </script>
+</body>
+</html> -->

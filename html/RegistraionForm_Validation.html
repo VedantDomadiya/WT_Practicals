@@ -1,0 +1,89 @@
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+<!--                   PRACTICAL 11 (IU2141050039)                 -->
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <center>
+        <h1>REGISTRATION FORM</h1>
+        <form action="submit.php" method="post" onsubmit="return validateForm()">
+            <table align="center">
+                <tr>
+                    <td align="right"><label for="username">Username:</label></td>
+                    <td><input type="text" id="username" name="username" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="birthdate">Date of Birth:</label></td>
+                    <td><input type="date" id="birthdate" name="birthdate" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="phno">Phone No:</label></td>
+                    <td><input type="text" id="phno" name="phno" pattern="[0-9]{10}" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="country">Country:</label></td>
+                    <td>
+                        <select id="country" name="country" required>
+                            <option value="USA">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="India">India</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="confirm_password">Confirm Password:</label></td>
+                    <td><input type="password" id="confirm_password" name="confirm_password" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <!-- Password Strength Meter (JavaScript) -->
+                        <div id="password-strength"></div>
+
+                        <!-- Privacy Policy Checkbox -->
+                        <input type="checkbox" id="privacy_policy" name="privacy_policy" required>
+                        <label for="privacy_policy">I agree to the terms and privacy policy</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <!-- Error Messages -->
+                        <div id="error-message" style="color: red;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Register"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+    <script>
+        // Implement JavaScript functions for validation and password strength
+        function validateForm() {
+            // Add your validation logic here
+            // Return false to prevent form submission on error
+        }
+
+        // Implement a password strength meter function
+        function checkPasswordStrength() {
+            // Add your password strength checking logic here
+        }
+    </script>
+</body>
+</html>

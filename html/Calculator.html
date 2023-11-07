@@ -1,0 +1,89 @@
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+<!--                   PRACTICAL 10 (IU2141050039)                 -->
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        select {
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form id="calculatorForm">
+        <label for="no1">Number 1:</label>
+        <input type="number" name="no1" id="no1">
+        <br>
+
+        <label for="no2">Number 2:</label>
+        <input type="number" name="no2" id="no2">
+        <br>
+
+        <label for="opr">Operation:</label>
+        <select id="opr" name="opr">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <br>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var no1 = parseFloat(document.getElementById("no1").value);
+            var no2 = parseFloat(document.getElementById("no2").value);
+            var opr_value = parseInt(document.getElementById("opr").value);
+            var result;
+
+            switch (opr_value) {
+                case 1:
+                    result = no1 + no2;
+                    break;
+                case 2:
+                    result = no1 - no2;
+                    break;
+                case 3:
+                    result = no1 * no2;
+                    break;
+                case 4:
+                    if (no2 === 0) {
+                        result = "Cannot divide by zero";
+                    } else {
+                        result = no1 / no2;
+                    }
+                    break;
+                default:
+                    result = "Invalid operation";
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
